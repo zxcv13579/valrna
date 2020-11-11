@@ -1,0 +1,437 @@
+@charset "UTF-8";
+@import "compass/reset";
+// @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+$breakpoint-xl: 1440px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, html{
+	position: relative;
+	background-color: #003A59;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+.video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	video {
+		width: auto;
+		height: auto;
+		min-width: 100%;
+    	min-height: 100%;
+		position: absolute;
+		top: 50%;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(-50%)
+	}
+}
+
+.container {
+	$this: &;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 723px;
+	background-color: #003A59;
+	box-shadow: 3px 3px 13px #000 inset, -3px -3px 13px #000 inset;
+	z-index: 2;
+	// background-image: url('../images/bg.png');
+ //    background-size: cover;
+ //    background-position: bottom;
+ //    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    overflow: hidden;
+    @media screen and (max-width: $breakpoint-lg) {
+    	overflow: auto;
+    	height: auto;
+    	box-shadow: unset;
+    	clip-path: unset;
+    	&::before,
+    	&::after {
+    		display: none !important;
+    	}
+    }
+    &::before {
+    	content: '';
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+		background-image: url('../images/bg.png');
+	    background-size: cover;
+	    background-position: bottom;
+	    background-repeat: no-repeat;
+	    opacity: 0.28;
+	    // z-index: -1;
+    }
+    &::after {
+    	content: '';
+    	width: 800px;
+    	height: 100%;
+    	display: block;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+		box-shadow: -6px 0px 13px #000 inset;
+		transform-origin: top right;
+		transform: translateX(1px) skewX(-11deg);
+		// z-index: -1;
+		@media screen and (max-width: $breakpoint-xl) {
+			transform: translateX(1px) skewX(-13deg);
+		}
+    }
+    &__intro {
+    	width: 100%;
+    	max-width: 500px;
+    	height: 100%;
+    	padding: 20px;
+    	position: relative;
+    	z-index: 2;
+    	@media screen and (max-width: $breakpoint-lg) {
+    		padding: 0;
+    	}
+    }
+    &__logo {
+    	width: 100%;
+    	max-width: 400px;
+    	margin: auto;
+    	@media screen and (max-width: $breakpoint-xl) {
+    		width: 70%;
+    	}
+    	@media screen and (max-width: 1366px) {
+    		width: 60%;
+    	}
+    	@media screen and (max-width: $breakpoint-lg) {
+		    position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		    width: 68%;
+    	}
+    }
+    // &__text {
+    // 	width: 100%;
+    // 	max-width: 450px;
+    // 	margin: auto;
+    // 	margin-top: 30px;
+    // 	@media screen and (max-width: $breakpoint-xl) {
+    // 		width: 70%;
+    // 	}
+    // 	@media screen and (max-width: $breakpoint-lg) {
+    // 		margin-top: 0;
+    // 	}
+    // }
+  //   &__beta,
+  //   &__formal {
+		// margin: 40px auto 0;
+  //   }
+
+	&__beta {
+		#{$this}__title {
+		    width: 100%;
+		    max-width: 300px;
+		    margin: auto;
+		    @media screen and (max-width: 1366px) {
+		    	max-width: 250px;
+		    }
+		    @media screen and (max-width: $breakpoint-lg) {
+		    	position: absolute;
+			    top: 175px;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    max-width: 180px;
+		    }
+		}
+		#{$this}__text {
+			width: 100%;
+		    margin: 30px auto 0;
+		    max-width: 400px;
+		    @media screen and (max-width: $breakpoint-xl) {
+		    	max-width: 320px;
+		    	margin: 20px auto 0;
+		    }
+		    @media screen and (max-width: 1366px) {
+		    	max-width: 270px;
+		    	margin: 0 auto;
+		    }
+		}
+		#{$this}__btn {
+			margin-top: 40px;
+			@media screen and (max-width: $breakpoint-xl) {
+				margin-top: 30px;
+			}
+		}
+		#{$this}__iosBeta {
+			max-width: 250px;
+			display: block;
+			margin: 5px auto 10px;
+			@media screen and (max-width: $breakpoint-xl) {
+				max-width: 220px;
+			}
+			@media screen and (max-width: 1366px) {
+		    	max-width: 180px	
+		    }
+		}
+		// #{$this}__coming {
+	 //    	display: block;
+	 //    	margin: 0 auto;
+	 //    	width: auto;
+	 //    	height: 35px;
+	 //    	@media screen and (max-width: $breakpoint-xl) {
+	 //    		height: 30px;
+	 //    	}
+	 //    }
+	    // #{$this}__shop {
+	    // 	width: 100%;
+	    // 	max-width: 385px;
+	    // 	margin: 60px auto 0;
+	    // 	@media screen and (max-width: $breakpoint-xl) {
+	    // 		max-width: 325px;
+	    // 	}
+	    // 	@media screen and (max-width: 1366px) {
+		   //  	max-width: 255px;	
+		   //  	margin: 30px auto 0;
+		   //  }
+		   //  @media screen and (max-width: $breakpoint-lg) {
+		   //  	max-width: 235px;
+		   //  }
+	    // 	> div {
+	    // 		margin-top: 10px;
+		   //  	display: flex;
+		   //  	justify-content: space-between;
+		   //  	align-items: center;
+		   //  	flex-wrap: wrap;
+	    // 	}
+	    // 	a >img {
+	    // 		width: auto;
+	    // 		height: 60px;
+	    // 		@media screen and (max-width: $breakpoint-xl) {
+	    // 			height: 50px;
+	    // 		}
+	    // 		@media screen and (max-width: 1366px) {
+			  //   	height: 40px;	
+			  //   }
+			  //   @media screen and (max-width: $breakpoint-lg) {
+			  //   	height: 36px;
+			  //   }
+
+	    // 	}
+	    // 	> img {
+	    // 		width: 100%;
+	    // 		display: block;
+		   //  	margin: 0 auto;
+		   //  	width: auto;
+		   //  	height: 35px;
+		   //  	@media screen and (max-width: $breakpoint-xl) {
+		   //  		height: 25px;
+		   //  	}
+	    // 	}
+	    // }
+	}
+	#{$this}__coming {
+		width: 100%;
+		display: block;
+    	margin: 60px auto 0;
+    	width: auto;
+    	height: 35px;
+    	@media screen and (max-width: $breakpoint-xl) {
+    		height: 25px;
+    	}
+    	@media screen and (max-width: 1366px) {
+    		margin: 30px auto 0;
+    	}
+    }
+	#{$this}__shop {
+    	width: 100%;
+    	max-width: 385px;
+    	margin: 0 auto;
+    	@media screen and (max-width: $breakpoint-xl) {
+    		max-width: 325px;
+    	}
+    	@media screen and (max-width: 1366px) {
+	    	max-width: 255px;	
+	    	// margin: 30px auto 0;
+	    }
+	    @media screen and (max-width: $breakpoint-lg) {
+	    	max-width: 235px;
+	    }
+    	> div {
+    		margin-top: 10px;
+	    	display: flex;
+	    	justify-content: space-between;
+	    	align-items: center;
+	    	flex-wrap: wrap;
+    	}
+    	a >img {
+    		width: auto;
+    		height: 60px;
+    		@media screen and (max-width: $breakpoint-xl) {
+    			height: 50px;
+    		}
+    		@media screen and (max-width: 1366px) {
+		    	height: 40px;	
+		    }
+		    @media screen and (max-width: $breakpoint-lg) {
+		    	height: 36px;
+		    }
+
+    	}
+    	
+    }
+
+
+	&__formal {
+		#{$this}__title {
+		    width: 100%;
+		    max-width: 350px;
+		    margin: auto;
+		    @media screen and (max-width: 1366px) {
+		    	max-width: 250px;
+		    }
+		    @media screen and (max-width: $breakpoint-lg) {
+		    	position: absolute;
+			    top: 175px;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    max-width: 180px;
+		    }
+		}
+		#{$this}__text {
+			width: 100%;
+		    margin: 80px auto 0;
+		    max-width: 420px;
+		    @media screen and (max-width: $breakpoint-xl) {
+		    	max-width: 380px;
+		    	margin: 60px auto 0;
+		    }
+		    @media screen and (max-width: 1366px) {
+		    	max-width: 300px;
+		    	margin: 40px auto 0;
+		    }
+		    @media screen and (max-width: 1366px) {
+		    	max-width: 320px;
+		    	margin: 0 auto;
+		    }
+		}
+		#{$this}__btn {
+			margin: 40px auto 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+    		max-width: 320px;
+			@media screen and (max-width: $breakpoint-xl) {
+				max-width: 300px;
+				margin: 40px auto;
+			}
+			@media screen and (max-width: 1366px) {
+				max-width: 250px;
+			}
+			@media screen and (max-width: $breakpoint-lg) {
+				margin: 40px auto 20px;
+			}
+		}
+		#{$this}__link {
+			@media screen and (max-width: 1366px) {
+				width: 50px;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // &__formal {
+    // 	display: flex;
+    // 	justify-content: space-between;
+    // 	align-items: center;
+    // 	width: 100%;
+    // 	max-width: 300px;
+    // }
+    &__link {
+		display: block;
+		width: 80px;
+		margin: auto;
+		// @media screen and (max-width: $breakpoint-xl) {
+  //   		width: 50px;
+  //   	}
+	}
+    
+    // &__shop {
+    // 	width: 100%;
+    // 	max-width: 385px;
+    // 	margin: 40px auto 0;
+    // 	display: flex;
+    // 	justify-content: space-between;
+    // 	align-items: center;
+    // 	flex-wrap: wrap;
+    // 	img {
+    // 		width: auto;
+    // 		height: 60px;
+    // 	}
+    // }
+    &__police {
+    	position: absolute;
+    	bottom: 10px;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	width: 100%;
+    	max-width: 450px;
+    	// margin: 0 auto ;
+    	@media screen and (max-width: $breakpoint-lg) {
+    		width: 90%;
+    		position: relative;
+    		bottom: 0;
+    		left: 0;
+    		transform: unset;
+    		margin: 40px auto 20px;
+    	}
+    }
+    &__protection {
+    	max-width: 60px;
+    	margin: auto;
+    	margin-bottom: 15px;
+    	display: block;
+    	@media screen and (max-width: 1366px) {
+			max-width: 40px;    	
+	    }
+    }
+    &__copyright {
+    	// width: auto;
+    	height: 14px;
+    	@media screen and (max-width: $breakpoint-lg) {
+    		height: auto;
+    	}
+    }
+}
+.hidden {
+	display: none;
+}

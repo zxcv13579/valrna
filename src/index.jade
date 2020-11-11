@@ -1,0 +1,63 @@
+//- include /jadeTemplate/_header.jade
+
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="format-detection" content="telephone=no")
+		title 法芙娜 - 神話級策略手遊_天火數位
+		link(rel="stylesheet" href="./assets/styles/main.css")
+	body
+		div.video
+			video(playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop")
+				source(src="./assets/images/bg.mp4")
+		div.container
+			div.container__intro
+				picture.container__mobile
+					source(media="(max-width: 992px)" srcset="./assets/images/bg-m.png")
+					img(src="")
+				div.container__logo
+					img(src="./assets/images/logo.png")
+				div.container__beta
+					div.container__title
+						img(src="./assets/images/beta-title.png")
+					div.container__text
+						img(src="./assets/images/beta-text.png")
+					div.container__btn
+						a.container__link(href="" target="_blank")
+							img(src="./assets/images/tap.png")
+						img.container__iosBeta(src="./assets/images/beta.png")
+					//- div.container__shop
+					//- 	img.container__coming(src="./assets/images/coming-soon.png")
+					//- 	div
+					//- 		a(href="" target="_blank")
+					//- 			img(src="./assets/images/ios.png")
+					//- 		a(href="" target="_blank")
+					//- 			img(src="./assets/images/android.png")
+					img.container__coming(src="./assets/images/coming-soon.png")
+				//- div.container__formal
+					div.container__title
+						img(src="./assets/images/formal-title.png")
+					div.container__text
+						img(src="./assets/images/formal-text.png")
+					div.container__btn
+						a.container__link(href="" target="_blank")
+							img(src="./assets/images/yt.png")
+						a.container__link(href="" target="_blank")
+							img(src="./assets/images/fb.png")
+						a.container__link(href="" target="_blank")
+							img(src="./assets/images/tap.png")
+				div.container__shop
+					div
+						a(href="" target="_blank")
+							img(src="./assets/images/ios.png")
+						a(href="" target="_blank")
+							img(src="./assets/images/android.png")
+
+
+				div.container__police
+					img.container__protection(src="./assets/images/protection.png")
+					img.container__copyright(src="./assets/images/copyright.png")
+script(src="./assets/scripts/jquery.min.js")
+script(src="./assets/scripts/main.js")
