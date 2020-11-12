@@ -59,5 +59,9 @@ html(lang="zh-tw")
 				div.container__police
 					img.container__protection(src="./assets/images/protection.png")
 					img.container__copyright(src="./assets/images/copyright.png")
-script(src="./assets/scripts/jquery.min.js")
-script(src="./assets/scripts/main.js")
+//- script(src="./assets/scripts/jquery.min.js")
+//- script(src="./assets/scripts/main.js")
+script.
+	(function(){
+		window.innerWidth < 1000 && document.getElementsByTagName('video')[0].remove();
+	})()

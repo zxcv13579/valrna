@@ -32,5 +32,8 @@
     </div>
   </body>
 </html>
-<script src="./assets/scripts/jquery.min.js"></script>
-<script src="./assets/scripts/main.js"></script>
+<script>
+  (function(){
+    window.innerWidth < 1000 && document.getElementsByTagName('video')[0].remove();
+  })()
+</script>
