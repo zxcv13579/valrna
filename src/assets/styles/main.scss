@@ -40,7 +40,18 @@ img {
 		position: absolute;
 		top: 50%;
 	    left: 50%;
-	    transform: translateX(-50%) translateY(-50%)
+	    transform: translateX(-50%) translateY(-50%);
+	}
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: #6c757d;
+		opacity: 0.7;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 
@@ -50,8 +61,8 @@ img {
 	width: 100%;
 	height: 100%;
 	max-width: 723px;
-	background-color: #003A59;
-	box-shadow: 3px 3px 13px #000 inset, -3px -3px 13px #000 inset;
+	background-color: rgba(0, 58, 89, 0.8);
+	// box-shadow: 3px 3px 13px #000 inset, -3px -3px 13px #000 inset;
 	z-index: 2;
 	// background-image: url('../images/bg.png');
  //    background-size: cover;
@@ -76,15 +87,15 @@ img {
     	position: absolute;
     	top: 0;
     	left: 0;
-		background-image: url('../images/bg.png');
-	    background-size: cover;
-	    background-position: bottom;
-	    background-repeat: no-repeat;
+		// background-image: url('../images/bg.png');
+	    // background-size: cover;
+	    // background-position: bottom;
+	    // background-repeat: no-repeat;
 	    opacity: 0.28;
 	    // z-index: -1;
     }
     &::after {
-    	content: '';
+    	// content: '';
     	width: 800px;
     	height: 100%;
     	display: block;
@@ -185,7 +196,7 @@ img {
 			display: block;
 			margin: 5px auto 10px;
 			@media screen and (max-width: $breakpoint-xl) {
-				max-width: 220px;
+				max-width: 200px;
 			}
 			@media screen and (max-width: 1366px) {
 		    	max-width: 180px	
@@ -255,17 +266,26 @@ img {
     	height: 35px;
     	@media screen and (max-width: $breakpoint-xl) {
     		height: 25px;
+    		margin: 40px auto 0;
     	}
     	@media screen and (max-width: 1366px) {
     		margin: 30px auto 0;
     	}
+    }
+    #{$this}__link{
+    	display: block;
+		width: 80px;
+		margin: auto;
+		@media screen and (max-width: $breakpoint-xl) {
+			width: 70px;
+		}
     }
 	#{$this}__shop {
     	width: 100%;
     	max-width: 385px;
     	margin: 0 auto;
     	@media screen and (max-width: $breakpoint-xl) {
-    		max-width: 325px;
+    		max-width: 295px;
     	}
     	@media screen and (max-width: 1366px) {
 	    	max-width: 255px;	
@@ -285,7 +305,7 @@ img {
     		width: auto;
     		height: 60px;
     		@media screen and (max-width: $breakpoint-xl) {
-    			height: 50px;
+    			height: 45px;
     		}
     		@media screen and (max-width: 1366px) {
 		    	height: 40px;	
@@ -351,6 +371,9 @@ img {
 			}
 		}
 		#{$this}__link {
+			display: block;
+			width: 80px;
+			margin: auto;
 			@media screen and (max-width: 1366px) {
 				width: 50px;
 			}
@@ -376,14 +399,14 @@ img {
     // 	width: 100%;
     // 	max-width: 300px;
     // }
-    &__link {
-		display: block;
-		width: 80px;
-		margin: auto;
+  //   &__link {
+		// display: block;
+		// width: 80px;
+		// margin: auto;
 		// @media screen and (max-width: $breakpoint-xl) {
   //   		width: 50px;
   //   	}
-	}
+	// }
     
     // &__shop {
     // 	width: 100%;
@@ -399,30 +422,36 @@ img {
     // 	}
     // }
     &__police {
-    	position: absolute;
-    	bottom: 10px;
-    	left: 50%;
-    	transform: translateX(-50%);
+    	// position: absolute;
+    	// bottom: 10px;
+    	// left: 50%;
+    	// transform: translateX(-50%);
     	width: 100%;
     	max-width: 450px;
-    	// margin: 0 auto ;
-    	@media screen and (max-width: $breakpoint-lg) {
-    		width: 90%;
-    		position: relative;
-    		bottom: 0;
-    		left: 0;
-    		transform: unset;
-    		margin: 40px auto 20px;
-    	}
+    	margin: 40px auto 0;
+    	// @media screen and (max-width: $breakpoint-xl) {
+    	// 	margin: 10px auto 0;
+    	// }
+    	// @media screen and (max-width: $breakpoint-lg) {
+    	// 	width: 90%;
+    	// 	position: relative;
+    	// 	bottom: 0;
+    	// 	left: 0;
+    	// 	transform: unset;
+    	// 	margin: 40px auto 20px;
+    	// }
     }
     &__protection {
     	max-width: 60px;
     	margin: auto;
     	margin-bottom: 15px;
     	display: block;
-    	@media screen and (max-width: 1366px) {
-			max-width: 40px;    	
-	    }
+    	@media screen and (max-width: $breakpoint-xl) {
+    		max-width: 40px;
+    	}
+   //  	@media screen and (max-width: 1366px) {
+			// max-width: 40px;    	
+	  //   }
     }
     &__copyright {
     	// width: auto;
